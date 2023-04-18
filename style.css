@@ -1,0 +1,513 @@
+@charset "utf-8";
+
+/* all */
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* hero */
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  padding: 0 16px;
+}
+
+.header .header-logo img {
+  width: 30%;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+
+.sp-menu {
+  margin-left: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  background: black;
+  padding: 10px 10px 5px 10px;
+  cursor: pointer;
+}
+
+.sp-menu #open {
+  font-size: 40px;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  background: black;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.overlay li {
+  font-size: 30px;
+  margin: 30px;
+  letter-spacing: 8px;
+}
+
+.overlay li a {
+  color: white;
+  cursor: pointer;
+}
+
+.overlay li a:hover {
+  color: #999;
+  transition: transform 1s;
+} 
+
+.ticket .ticket-title {
+  margin: 64px 0 32px;
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 30px;
+}
+
+.buy-ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buy-ticket-content {
+  display: flex;
+  border: 1px solid black;
+  width: calc(100% - 64px);
+  margin-bottom: 64px;
+}
+
+.sell-name {
+  color: white;
+  background: black;
+  padding: 80px 24px;
+  width: calc((100% - 64px) / 3);
+  text-align: center;
+}
+
+.sell-name h3 {
+ font-weight: normal;
+}
+
+.price {
+ padding: 60px 24px;
+ border-right: 1px solid black;
+ text-align: center;
+ width: calc((100% - 64px) / 3);
+}
+
+.price .btn {
+  background: red;
+  color: white;
+  padding: 12px 60px;
+  border-radius: 32px;
+  white-space: nowrap;
+}
+
+.price .btn:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.period {
+  font-size: 14px;
+  padding: 60px 24px;
+  text-align: center;
+  width: calc((100% - 64px) / 3);
+}
+
+.soldout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* opacity: 0.3; */
+}
+
+.soldout .buy-ticket-content {
+  border: 1px solid silver;
+}
+
+.soldout .sell-name {
+  background: silver;
+}
+
+.soldout .price {
+  color: silver;
+ border-right: 1px solid silver;
+}
+
+.soldout .price .btn {
+  background: silver;
+  color: white;
+  pointer-events: none;
+}
+
+.soldout .period {
+  color: silver;
+}
+
+.info {
+  background: #444;
+  text-align: center;
+}
+
+.info .info-title {
+  color: white;
+  letter-spacing: 4px;
+  padding: 64px 0;
+  font-size: 30px;
+}
+
+.cast .cast-title {
+  color: white;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.cast .artist {
+  display: block;
+  color: white;
+  font-weight: normal;
+
+}
+
+.cast .caution {
+  color: silver;
+  font-size: 12px;
+  margin-top: 5px;
+  padding-bottom: 32px;
+}
+
+.date-place {
+  color: white;
+  padding-bottom: 24px;
+  letter-spacing: 8px;
+}
+
+.container {
+  padding-bottom: 64px;
+}
+
+.container p {
+  margin: 0;
+}
+
+.card-item {
+  width: calc((100% - 64px) / 2);
+  display: inline-block;
+  border: 1px solid black;
+  margin-bottom: 32px;
+}
+
+.card-item:nth-child(1),
+.card-item:nth-child(3) {
+  margin-right: 20px;
+}
+
+.place {
+  background: black;
+  color: white;
+  padding: 16px 64px;
+}
+
+.date,
+.concert-info {
+  background: white;
+}
+
+.date {
+  padding: 32px 0;
+  border-bottom: 1px dotted silver;
+}
+
+.concert-info {
+  display: flex;
+  padding: 20px 0 64px;
+  align-items: center;
+}
+
+.concert-info .title {
+  background: #999;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 64px;
+  font-size: 12px;
+  margin:0 16px 0 32px;
+  white-space: nowrap;
+}
+
+.concert-info .text {
+  font-size: 14px;
+  text-align: left;
+}
+
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 64px 64px 32px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.footer p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  padding-bottom: 16px;
+}
+
+.footer .footer-title {
+  padding-bottom: 4px;
+}
+
+.footer a {
+  color: red;
+  
+}
+
+.footer a:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+
+/* ボタン全体 */
+.flowbtn6{
+  border-radius:13px;		
+  position:relative;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  font-size:33px;
+  color:#fff!important;
+  transition:.5s;
+  text-decoration:none;
+  }	
+  /* アイコンをど真ん中に*/
+  .flowbtn6 i{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  }
+  /* ulタグの内側余白を０にする */
+  ul.snsbtniti{
+  padding:0!important;
+  }
+  /* アイコンボタン全体の位置 */
+  .snsbtniti{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  }
+  /* アイコンボタン同士の余白 */
+  .snsbtniti li{
+  flex:0 0 10%;
+  text-align:center!important;
+  }
+  /* アイコンボタンにマウスを乗せた時 */
+  .flowbtn6:hover{
+  -webkit-transform:translateY(-5px);
+  -ms-transform:translateY(-5px);
+  transform:translateY(-5px);
+  }
+  /* Twitter */
+  .fl_tw1{
+  background:#55acee;
+  }
+  /* Instagramアイコン位置 */
+  .insta_btn6 .fa-instagram{
+  font-size:40px;
+  }
+  /* Instagram紫グラデ背景 */
+  .insta_btn6 {
+  background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  overflow:hidden;	
+  }
+  /* Instagramオレンジグラデ背景 */
+  .insta_btn6:before{
+  content: '';
+  position: absolute;
+  top:27px;
+  left:-12px;
+  width:59px;
+  height:40px;
+  background:-webkit-radial-gradient(#ffdb2c 7%, rgba(255, 105, 34, 0.3) 60%, rgba(255, 88, 96, 0) 70%);
+  background:radial-gradient(#ffdb2c 7%, rgba(255, 105, 34, 0.3) 60%, rgba(255, 88, 96, 0) 70%);
+  }
+  
+  /* YouTube */
+  .fl_yu6 {
+    background: white;
+  color:#fc0d1c!important;
+  box-shadow:0 0 2px #888;	
+  }
+  
+  @media (min-width:1300px) {
+    .card-item {
+      width: calc((100% - 128px) / 3);
+      flex-wrap: wrap;
+    }
+    .card-item:nth-child(3) {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width:770px) {
+    .buy-ticket-content {
+      display: block;
+      border: 1px solid black;
+      width: calc(100% - 64px);
+      margin-bottom: 64px;
+    }
+    
+    .sell-name {
+      color: white;
+      background: black;
+      padding: 24px 0;
+      width: auto;
+      text-align: center;
+    }
+    
+    .sell-name h3 {
+     font-weight: normal;
+    }
+    
+    .price {
+     padding: 24px 0 40px;
+     text-align: center;
+     width: auto;
+     border: none;
+     border-bottom: 1px solid black;
+    }
+    
+    .price .btn {
+      background: red;
+      color: white;
+      padding: 12px 70px;
+      border-radius: 32px;
+      white-space: nowrap;
+    }
+    
+    .period {
+      font-size: 14px;
+      padding: 24px 0;
+      text-align: center;
+      width: auto;
+    }
+    
+    .soldout .price {
+      border: none;
+     border-bottom: 1px solid silver;
+
+    }
+
+    .info {
+      width: 100%;
+    }
+
+    .card-item {
+      width: auto;
+      margin: 0 32px;
+      display: block;
+      border: 1px solid black;
+      margin-bottom: 32px;
+    }
+
+    .card-item:nth-child(1),
+    .card-item:nth-child(3) {
+        margin: 32px;
+    }
+
+    .concert-info {
+      display: flex;
+      padding: 20px 0 40px;
+      align-items: center;
+      line-height: 2;
+    }
+    
+    .concert-info .title {
+      background: #999;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 64px;
+      font-size: 12px;
+      margin:0 16px 0 32px;
+      white-space: nowrap;
+    }
+    
+    .concert-info .text {
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .snsbtniti li{
+      flex:0 0 20%;
+      text-align:center!important;
+      }
+  }
